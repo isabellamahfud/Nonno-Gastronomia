@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nonno Gastronomia — Restaurante italiano no Centro de Curitiba</title>
+<meta name="description" content="Buffet temático de segunda a sexta, das 11h30 às 14h30, no Centro de Curitiba. Sexta Italiana, espaço privativo para eventos e mesas externas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Nonno Gastronomia","telephone":"+5541999902053","address":{"@type":"PostalAddress","streetAddress":"Rua Lamenha Lins, 71","addressLocality":"Curitiba","addressRegion":"PR","postalCode":"80250-020","addressCountry":"BR"},"openingHours":"Mo-Fr 11:30-14:30","servesCuisine":"Italiana"}</script>
+<style>
+:root{--olive:#354332;--deep:#20291F;--cream:#F5F0E6;--beige:#E7DDC9;--gold:#B49A65;--ink:#171815;
+--bg:var(--cream);--bg2:var(--beige);--fg:var(--ink);--muted:#5a5f54;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b211a;--bg2:#232b21;--fg:#F5F0E6;--muted:#b9b6a6;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1b211a;--bg2:#232b21;--fg:#F5F0E6;--muted:#b9b6a6;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0}
+h2{font-size:clamp(2rem,4.5vw,3.4rem)}
+.wrap{width:min(1180px,100% - 3rem);margin-inline:auto}
+section{padding:clamp(4.5rem,9vw,8rem) 0}
+.eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 1.1rem}
+.btn{display:inline-block;padding:.95rem 1.7rem;font-size:.75rem;letter-spacing:.18em;font-weight:600;text-decoration:none;text-transform:uppercase;border:1px solid var(--gold);transition:.3s;cursor:pointer}
+.btn.fill{background:var(--gold);color:var(--ink)}
+.btn.fill:hover{background:transparent;color:var(--gold)}
+.btn.line{color:inherit}
+.btn.line:hover{background:var(--gold);color:var(--ink)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:.35s;color:var(--cream)}
+header.solid{background:rgba(245,240,230,.96);color:var(--ink);box-shadow:0 1px 0 rgba(0,0,0,.08);backdrop-filter:blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-family:var(--serif);font-size:1.7rem;text-decoration:none;letter-spacing:.04em}
+.logo small{display:block;font-family:var(--sans);font-size:.55rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-top:-.2rem}
+nav ul{display:flex;gap:2rem;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+nav a:not(.btn):hover{color:var(--gold)}
+nav .btn{padding:.7rem 1.2rem}
+.burger{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;width:26px;height:2px;background:currentColor;margin:6px auto;transition:.3s}
+@media(max-width:900px){.burger{display:block}
+nav{position:fixed;inset:0;background:var(--deep);color:var(--cream);display:grid;place-items:center;transform:translateY(-100%);transition:.45s;visibility:hidden}
+nav.open{transform:none;visibility:visible}
+nav ul{flex-direction:column;gap:1.6rem;text-align:center}
+nav a{font-size:1rem}
+header .burger{position:relative;z-index:60}}
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:flex-end;color:var(--cream);position:relative;padding:0;background:
+linear-gradient(180deg,rgba(23,24,21,.55),rgba(32,41,31,.88)),radial-gradient(circle at 70% 30%,#4b5e45,#20291F 70%)}
+.hero .wrap{padding:9rem 0 5rem}
+.hero h1{font-size:clamp(2.8rem,7.5vw,6rem);max-width:13ch}
+.hero h1 em{color:var(--gold)}
+.hero p.sub{max-width:520px;font-size:1.05rem;opacity:.9;margin:1.6rem 0 2.2rem}
+.ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.facts{display:flex;gap:2.2rem;flex-wrap:wrap;margin-top:3.5rem;padding-top:1.6rem;border-top:1px solid rgba(180,154,101,.5);font-size:.72rem;letter-spacing:.25em;color:var(--gold);font-weight:600}
+.ph{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--olive),var(--deep));display:grid;place-items:end start;color:rgba(245,240,230,.75);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;padding:1rem}
+.ph::before{content:"";position:absolute;inset:.7rem;border:1px solid rgba(180,154,101,.35);pointer-events:none}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s}
+.hero .bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transition:opacity 1.2s}
+.hero .bgv.on{opacity:1}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,24,21,.55),rgba(32,41,31,.88));z-index:1}
+.hero .wrap{position:relative;z-index:2}
+.ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph img[data-media]:not([hidden])~span,.ph video:not([hidden])~span{position:relative;z-index:2;text-shadow:0 1px 6px #000}
+.ph:has(img:not([hidden]),video:not([hidden]))::before{z-index:1}
+.hero[data-bg]{background-size:cover;background-position:center 40%}
+.day.foto{background-size:cover;background-position:center}
+/* sobre */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.split .ph{aspect-ratio:4/5}
+.split p{color:var(--muted);max-width:46ch}
+.rule{width:64px;height:1px;background:var(--gold);margin:2rem 0}
+@media(max-width:800px){.split{grid-template-columns:1fr}}
+/* buffet */
+.dark{background:var(--deep);color:var(--cream)}
+.dark .muted{color:#c6c2b0}
+.days{display:grid;grid-template-columns:repeat(6,1fr);gap:1.2rem;margin-top:3.5rem}
+.day{grid-column:span 2;position:relative;aspect-ratio:3/4;background:linear-gradient(160deg,var(--olive),#171d16);padding:1.6rem;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid rgba(180,154,101,.25);transition:.4s}
+.day:hover{transform:translateY(-6px);border-color:var(--gold)}
+.day:nth-child(4),.day:nth-child(5){grid-column:span 3;aspect-ratio:16/10}
+.day small{font-size:.68rem;letter-spacing:.25em;color:var(--gold);font-weight:600}
+.day h3{font-size:1.9rem;margin:.4rem 0 .3rem}
+.day p{margin:0;font-size:.9rem;color:#c6c2b0}
+.day.hl{background:linear-gradient(160deg,#4a5c43,#2a3528)}
+.notice{margin-top:3rem;text-align:center;font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--gold)}
+@media(max-width:900px){.days{grid-template-columns:1fr 1fr}.day,.day:nth-child(4),.day:nth-child(5){grid-column:span 1;aspect-ratio:4/5}}
+@media(max-width:520px){.days{grid-template-columns:1fr}.day,.day:nth-child(4),.day:nth-child(5){aspect-ratio:16/10}}
+/* galeria */
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:.8rem;margin-top:3rem}
+.mosaic .ph{padding:1rem}
+.mosaic .ph:hover img,.mosaic .ph:hover::after{transform:scale(1.07)}
+.mosaic .ph::after{content:"";position:absolute;inset:0;background:inherit;opacity:0;transition:transform .9s}
+.m1{grid-column:span 2;grid-row:span 2}.m4{grid-row:span 2}.m6{grid-column:span 2}
+@media(max-width:800px){.mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.m1{grid-column:span 2}.m6{grid-column:span 2}}
+.mosaic .ph:nth-child(even){background:linear-gradient(135deg,#5a6b52,#2a3528)}
+/* eventos */
+.events{background:var(--bg2)}
+.list{list-style:none;padding:0;margin:2rem 0 2.5rem}
+.list li{padding:.9rem 0;border-bottom:1px solid rgba(180,154,101,.5);font-family:var(--serif);font-size:1.5rem}
+/* avaliações */
+.score{display:flex;align-items:baseline;gap:1rem;margin:1.5rem 0 3rem}
+.score b{font-family:var(--serif);font-size:4.5rem;font-weight:500;line-height:1;color:var(--gold)}
+.stars{color:var(--gold);letter-spacing:.2em}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.q{border-top:1px solid var(--gold);padding-top:1.4rem}
+.q p{font-family:var(--serif);font-size:1.45rem;line-height:1.3;margin:.8rem 0 1.2rem}
+.q cite{font-style:normal;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:850px){.quotes{grid-template-columns:1fr}}
+/* contato */
+.info{display:grid;gap:1.4rem;margin:2rem 0}
+.info dt{font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.info dd{margin:.2rem 0 0}
+.map{min-height:420px;display:grid;place-items:center;text-align:center;padding:2rem;background:linear-gradient(135deg,#2c3829,#171d16);border:1px solid rgba(180,154,101,.35)}
+.map p{font-family:var(--serif);font-size:1.6rem;margin:0 0 1.5rem}
+footer{background:var(--ink);color:#cfcab9;padding:4rem 0 2rem;font-size:.9rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:3rem}
+footer h4{font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin:0 0 1rem}
+footer ul{list-style:none;margin:0;padding:0}footer li{margin:.4rem 0}
+footer a{text-decoration:none}footer a:hover{color:var(--gold)}
+.fend{margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--gold)}
+@media(max-width:800px){.fgrid{grid-template-columns:1fr}}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+.days{grid-template-columns:repeat(6,1fr)}
+.day,.day:nth-child(4),.day:nth-child(5){grid-column:span 2;aspect-ratio:4/5}
+.day:nth-child(4){grid-column:2/span 2}.day:nth-child(5){grid-column:4/span 2}
+.day.poster{padding:0;background-size:cover;background-position:center}
+/* Restaurar textos dos cards do buffet */
+.day.poster > * {
+    position: relative;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+.day.poster {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.6rem;
+}
+
+.day.poster small,
+.day.poster h3,
+.day.poster p {
+    z-index: 2;
+    color: #F5F0E6;
+}
+@media(max-width:900px){.days{grid-template-columns:1fr 1fr}.day,.day:nth-child(4),.day:nth-child(5){grid-column:auto}}
+@media(max-width:520px){.days{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header id="top">
+<div class="wrap nav">
+<a class="logo" href="#inicio" aria-label="Nonno Gastronomia">Nonno<small>Gastronomia</small></a>
+<button class="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+<nav id="menu" aria-label="Principal">
+<ul>
+<li><a href="#inicio">Início</a></li>
+<li><a href="#sobre">Nossa gastronomia</a></li>
+<li><a href="#buffet">Buffet</a></li>
+<li><a href="#galeria">Galeria</a></li>
+<li><a href="#eventos">Eventos</a></li>
+<li><a href="#contato">Contato</a></li>
+<li><a class="btn fill" href="https://www.google.com/maps/dir/?api=1&destination=Nonno+Gastronomia+Rua+Lamenha+Lins+71+Curitiba" target="_blank" rel="noopener">Como chegar</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+<div class="wrap">
+<p class="eyebrow">Restaurante italiano · Centro</p>
+<h1>Uma experiência gastronômica para <em>apreciar</em> todos os dias.</h1>
+<p class="sub">Sabores especiais, variedade e um buffet temático preparado para transformar seu almoço em um momento especial.</p>
+<div class="ctas">
+<a class="btn fill" href="#buffet">Conheça nosso buffet</a>
+<a class="btn line" href="https://www.google.com/maps/dir/?api=1&destination=Nonno+Gastronomia+Rua+Lamenha+Lins+71+Curitiba" target="_blank" rel="noopener">Como chegar</a>
+</div>
+<div class="facts"><span>SEGUNDA A SEXTA</span><span>11H30 ÀS 14H30</span><span>CURITIBA — PR</span></div>
+</div>
+</section>
+
+<section id="sobre">
+<div class="wrap split">
+<div class="ph rv" role="img" aria-label="Espaço reservado para foto do ambiente"><img data-media="fachada" alt="Ambiente do Nonno Gastronomia" loading="lazy" hidden><span>Foto · Ambiente / pratos</span></div>
+<div class="rv">
+<p class="eyebrow">Sobre o Nonno</p>
+<h2>Mais do que uma refeição, uma experiência.</h2>
+<div class="rule"></div>
+<p>O Nonno Gastronomia é um restaurante localizado no coração de Curitiba, dedicado a proporcionar uma experiência gastronômica especial durante o almoço.</p>
+<p>Com um cardápio temático diferente a cada dia, oferecemos variedade de sabores, pratos cuidadosamente preparados e um ambiente agradável para compartilhar bons momentos.</p>
+</div>
+</div>
+</section>
+
+<section id="buffet" class="dark">
+<div class="wrap">
+<p class="eyebrow">Nosso buffet</p>
+<h2 class="rv">Um novo sabor para cada dia.</h2>
+<div class="days">
+    <article class="day foto rv" data-bg="nhoque" data-pos="50% 60%">
+        <small>SEG</small>
+        <h3>Segunda-feira</h3>
+        <p>Cardápio temático do dia.</p>
+    </article>
+
+    <article class="day poster foto rv" data-bg="terca-feira" data-pos="50% 60%">
+        <small>TER</small>
+        <h3>Terça Italiana</h3>
+        <p>Cardápio temático do dia.</p>
+    </article>
+
+    <article class="day poster foto rv" data-bg="quarta-feira" data-pos="50% 60%">
+        <small>QUA</small>
+        <h3>Quarta Brasileira</h3>
+        <p>Cardápio temático do dia.</p>
+    </article>
+
+    <article class="day poster foto rv" data-bg="quinta-feira" data-pos="50% 60%">
+        <small>QUI</small>
+        <h3>Quinta Árabe e Mexicana</h3>
+        <p>Cardápio temático do dia.</p>
+    </article>
+
+    <article class="day poster foto rv" data-bg="sexta-feira" data-pos="50% 60%">
+        <small>SEX</small>
+        <h3>Sexta Italiana</h3>
+        <p>Cardápio temático do dia.</p>
+    </article>
+</div>
+<p class="notice">Nosso buffet é servido de segunda a sexta-feira, das 11h30 às 14h30.</p>
+</div>
+</section>
+
+<section id="galeria">
+<div class="wrap">
+<p class="eyebrow">Galeria</p>
+<h2 class="rv">Uma experiência que começa pelos olhos.</h2>
+<div class="mosaic">
+<div class="ph m1 rv"><video data-media="vpizza" muted loop playsinline autoplay preload="metadata" aria-label="Vídeo das pizzas do buffet" hidden></video><span>Pizzas do buffet</span></div>
+<div class="ph m2 rv"><video data-media="vdoce" muted loop playsinline autoplay preload="metadata" aria-label="Pizza doce" hidden></video><span>Pizza doce</span></div>
+<div class="ph m3 rv"><img data-media="nhoque" alt="Nhoque" loading="lazy" style="object-position:50% 40%" hidden><span>Nhoque</span></div>
+<div class="ph m4 rv"><img data-media="prato" alt="Prato gratinado" loading="lazy" style="object-position:50% 50%" hidden><span>Do forno à mesa</span></div>
+<div class="ph m5 rv"><img data-media="pizza" alt="Pizzas no buffet" loading="lazy" style="object-position:50% 15%" hidden><span>Pizzas</span></div>
+<div class="ph m6 rv"><img data-media="fachada" alt="Fachada do restaurante" loading="lazy" style="object-position:50% 12%" hidden><span>Rua Lamenha Lins, 71</span></div>
+<div class="ph m7 rv"><img data-media="almoco" alt="Almoço no Nonno" loading="lazy" style="object-position:50% 66%" hidden><span>Almoço</span></div>
+</div>
+</div>
+</section>
+
+<section id="eventos" class="events">
+<div class="wrap split">
+<div class="rv">
+<p class="eyebrow">Eventos e espaço privativo</p>
+<h2>Momentos especiais merecem uma boa mesa.</h2>
+<ul class="list"><li>Espaço privativo para eventos</li><li>Ambiente agradável</li><li>Mesas externas</li></ul>
+<a class="btn fill" href="https://wa.me/5541999902053?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20o%20espa%C3%A7o%20privativo%20para%20eventos." target="_blank" rel="noopener">Consulte nosso espaço</a>
+</div>
+<div class="ph rv" style="aspect-ratio:4/5" role="img" aria-label="Espaço reservado para foto do espaço privativo"><img data-media="momentos" alt="Clientes almoçando no Nonno" loading="lazy" style="object-position:50% 40%" hidden><span>Momentos especiais</span></div>
+</div>
+</section>
+
+<section id="avaliacoes">
+<div class="wrap">
+<p class="eyebrow">Avaliações</p>
+<h2 class="rv">Quem conhece, recomenda.</h2>
+<div class="score rv"><b>4,9</b><div><div class="stars" aria-label="4,9 de 5 estrelas">★★★★★</div><small>Avaliação no Google</small></div></div>
+<div class="quotes">
+<figure class="q rv" style="margin:0"><div class="stars" aria-hidden="true">★★★★★</div><p>“Ótima opção na sexta com comida italiana, inclusive pizza no buffet.”</p><cite>— Sandra Viana</cite></figure>
+<figure class="q rv" style="margin:0"><div class="stars" aria-hidden="true">★★★★★</div><p>“Atendimento bacana, bons pratos e local bem agradável, vale a visita.”</p><cite>— Luiz Giacomelli</cite></figure>
+<figure class="q rv" style="margin:0"><div class="stars" aria-hidden="true">★★★★★</div><p>“Ainda bebi boa taça de vinho Malbec argentino - Lobo em Pele de Cordeiro.”</p><cite>— hugoabreu5</cite></figure>
+</div>
+<p style="margin-top:3rem"><a class="btn line" href="https://www.google.com/maps/search/?api=1&query=Nonno+Gastronomia+Rua+Lamenha+Lins+71+Curitiba" target="_blank" rel="noopener">Ver avaliações no Google</a></p>
+</div>
+</section>
+
+<section id="contato" class="dark">
+<div class="wrap split">
+<div class="rv">
+<p class="eyebrow">Localização e contato</p>
+<h2>Esperamos por você!</h2>
+<dl class="info">
+<div><dt>Endereço</dt><dd>Rua Lamenha Lins, 71 — Centro, Curitiba — PR, 80250-020</dd></div>
+<div><dt>Telefone</dt><dd><a href="tel:+5541999902053">(41) 99990-2053</a></dd></div>
+<div><dt>Horário</dt><dd>Segunda a sexta-feira, das 11h30 às 14h30</dd></div>
+<div><dt>Serviços</dt><dd>Buffet à vontade · Mesas externas · Espaço privativo para eventos</dd></div>
+</dl>
+<div class="ctas">
+<a class="btn fill" href="https://www.google.com/maps/dir/?api=1&destination=Nonno+Gastronomia+Rua+Lamenha+Lins+71+Curitiba" target="_blank" rel="noopener">Abrir rota</a>
+<a class="btn line" href="tel:+5541999902053">Ligar</a>
+<a class="btn line" href="https://wa.me/5541999902053" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+</div>
+<div class="map rv"><div><p>Rua Lamenha Lins, 71<br>Centro · Curitiba</p><a class="btn fill" href="https://www.google.com/maps/search/?api=1&query=Nonno+Gastronomia+Rua+Lamenha+Lins+71+Curitiba" target="_blank" rel="noopener">Ver no Google Maps</a></div></div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div class="fgrid">
+<div><a class="logo" href="#inicio" style="color:var(--cream)">Nonno<small>Gastronomia</small></a><p style="max-width:34ch;margin-top:1.2rem">Gastronomia italiana e buffet temático no coração de Curitiba.</p></div>
+<div><h4>Visite</h4><ul><li>Rua Lamenha Lins, 71 — Centro</li><li>Curitiba — PR, 80250-020</li><li><a href="tel:+5541999902053">(41) 99990-2053</a></li><li>Seg a sex, 11h30 às 14h30</li></ul></div>
+<div><h4>Navegue</h4><ul><li><a href="#buffet">Buffet</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#eventos">Eventos</a></li><li><a href="#contato">Contato</a></li><li><a href="https://www.instagram.com/nonnogastronomia" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+</div>
+<p class="fend">Nonno Gastronomia — Bons momentos têm sabor.</p>
+</div>
+</footer>
+
+
+<script>
+(function () {
+    'use strict';
+
+    // ==========================================
+    // MENU E CABEÇALHO
+    // ==========================================
+
+    var header = document.getElementById('top');
+    var burger = document.querySelector('.burger');
+    var menu = document.getElementById('menu');
+
+    function updateHeader() {
+        if (!header) return;
+
+        var menuOpen = menu && menu.classList.contains('open');
+
+        header.classList.toggle(
+            'solid',
+            window.scrollY > 40 && !menuOpen
+        );
+    }
+
+    window.addEventListener('scroll', updateHeader, {
+        passive: true
+    });
+
+    updateHeader();
+
+    if (burger && menu) {
+        burger.addEventListener('click', function () {
+            var isOpen = menu.classList.toggle('open');
+
+            burger.setAttribute('aria-expanded', String(isOpen));
+
+            updateHeader();
+        });
+
+        menu.addEventListener('click', function (event) {
+            if (event.target.closest('a')) {
+                menu.classList.remove('open');
+
+                burger.setAttribute('aria-expanded', 'false');
+
+                updateHeader();
+            }
+        });
+    }
+
+
+    // ==========================================
+    // ARQUIVOS DE IMAGEM E VÍDEO
+    // ==========================================
+
+    // Os arquivos ficam na pasta nonno-imagens.
+    // Os nomes precisam corresponder ao data-media
+    // ou data-bg utilizado no HTML.
+
+    var M = {
+        fachada: 'nonno-imagens/fachada.jpg',
+        nhoque: 'nonno-imagens/nhoque.jpg',
+
+        'terca-feira': 'nonno-imagens/terca-feira.jpg',
+        'quarta-feira': 'nonno-imagens/quarta-feira.jpg',
+        'quinta-feira': 'nonno-imagens/quinta-feira.jpg',
+        'sexta-feira': 'nonno-imagens/sexta-feira.jpg',
+
+        pizza: 'nonno-imagens/pizza.jpg',
+        prato: 'nonno-imagens/prato.png',
+        almoco: 'nonno-imagens/almoco.jpg',
+        momentos: 'nonno-imagens/momentos.jpg',
+
+        vpizza: 'nonno-imagens/pizza-video.mp4',
+        vdoce: 'nonno-imagens/pizza-doce-video.mp4'
+    };
+
+
+  // ==========================================
+// CARREGAMENTO DAS IMAGENS
+// ==========================================
+
+document.querySelectorAll('img[data-media]').forEach(function (img) {
+    var file = M[img.dataset.media];
+
+    if (!file) {
+        console.error('Imagem não cadastrada:', img.dataset.media);
+        return;
+    }
+
+    // Mostrar a imagem antes de iniciar o carregamento
+    img.hidden = false;
+
+    img.onload = function () {
+        var span = img.parentElement.querySelector('span');
+
+        if (span) {
+            span.style.position = 'relative';
+            span.style.zIndex = '2';
+        }
+    };
+
+    img.onerror = function () {
+        console.error('Erro ao carregar imagem:', file);
+        img.hidden = true;
+    };
+
+    img.src = file;
+});
+
+    // ==========================================
+    // VÍDEOS
+    // ==========================================
+
+    document.querySelectorAll('video[data-media]').forEach(function (video) {
+        var file = M[video.dataset.media];
+
+        if (!file) {
+            console.warn('Vídeo não cadastrado:', video.dataset.media);
+            return;
+        }
+
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+
+        video.addEventListener('loadeddata', function () {
+            video.hidden = false;
+            video.classList.add('on');
+
+            video.play().catch(function () {
+                console.warn('Reprodução automática bloqueada:', file);
+            });
+        });
+
+        video.addEventListener('error', function () {
+            console.error('Não foi possível carregar o vídeo:', file);
+        });
+
+        video.src = file;
+        video.load();
+    });
+
+
+    // ==========================================
+    // FUNDOS DOS CARDS
+    // ==========================================
+
+    document.querySelectorAll('[data-bg]').forEach(function (element) {
+        var key = element.dataset.bg;
+        var file = M[key];
+
+        if (!file) {
+            console.warn('Fundo não cadastrado:', key);
+            return;
+        }
+
+        var position = element.dataset.pos || 'center';
+
+        var background = element.dataset.plain
+            ? 'url("' + file + '")'
+            : 'linear-gradient(180deg, rgba(23,24,21,.15), rgba(23,24,21,.85)), url("' + file + '")';
+
+        element.style.backgroundPosition = position;
+        element.style.backgroundSize = 'cover';
+        element.style.backgroundRepeat = 'no-repeat';
+        element.style.backgroundImage = background;
+    });
+
+
+    // ==========================================
+    // ANIMAÇÕES AO ROLAR A PÁGINA
+    // ==========================================
+
+    var revealElements = document.querySelectorAll('.rv');
+
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12
+        });
+
+        revealElements.forEach(function (element) {
+            observer.observe(element);
+        });
+
+    } else {
+        revealElements.forEach(function (element) {
+            element.classList.add('in');
+        });
+    }
+
+})();
+</script>
+
+
+</body>
+</html>
